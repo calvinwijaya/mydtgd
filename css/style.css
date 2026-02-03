@@ -152,6 +152,10 @@ body {
 .card-ruang .btn { background-color: #c53030; }
 .card-ruang .btn:hover { background-color: #9b2c2c; }
 
+.card-asisten h3 { color: #805ad5; }
+.card-asisten .btn {background-color: #805ad5;border: none;}
+.card-asisten .btn:hover {background-color: #6b46c1;}
+
 /* --- Footer --- */
 footer {
   padding: 24px;
@@ -227,4 +231,21 @@ footer {
 /* Pastikan main-container transparan agar background terlihat */
 body {
   background-color: transparent;
+}
+
+/* Pengaturan Grid Utama */
+@media (min-width: 992px) {
+    .card-grid {
+        display: grid;
+        /* Membuat 3 kolom dengan lebar yang sama */
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 30px;
+        justify-content: center;
+    }
+
+    /* Memposisikan kartu ke-4 (Sistem Asisten) agar di baris 2, kolom 2 */
+    .card-asisten {
+        grid-column: 2; /* Memaksa kartu mulai di kolom ke-2 */
+        grid-row: 2;    /* Memaksa kartu berada di baris ke-2 */
+    }
 }

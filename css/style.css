@@ -156,6 +156,10 @@ body {
 .card-asisten .btn {background-color: #805ad5;border: none;}
 .card-asisten .btn:hover {background-color: #6b46c1;}
 
+.card-sigma h3 { color: #EB7001; }
+.card-sigma .btn {background-color: #EB7001;border: none;}
+.card-sigma .btn:hover {background-color: #EB7001;}
+
 /* --- Footer --- */
 footer {
   padding: 24px;
@@ -237,15 +241,25 @@ body {
 @media (min-width: 992px) {
     .card-grid {
         display: grid;
-        /* Membuat 3 kolom dengan lebar yang sama */
-        grid-template-columns: repeat(3, 1fr); 
+        grid-template-columns: repeat(6, 1fr); 
         gap: 30px;
         justify-content: center;
+        max-width: 1140px;
+        width: 100%;
     }
 
     /* Memposisikan kartu ke-4 (Sistem Asisten) agar di baris 2, kolom 2 */
+    .card-sipintas, .card-siporto, .card-ruang {
+        grid-column: span 2;
+    }
+
+    /* Kartu baris kedua: Sistem Asisten (Kartu ke-4) */
     .card-asisten {
-        grid-column: 2; /* Memaksa kartu mulai di kolom ke-2 */
-        grid-row: 2;    /* Memaksa kartu berada di baris ke-2 */
+        grid-column: 2 / span 2; /* Mulai dari kolom 2, ambil 2 slot */
+    }
+
+    /* Kartu baris kedua: SIGMA (Kartu ke-5) */
+    .card-sigma {
+        grid-column: 4 / span 2; /* Mulai dari kolom 4, ambil 2 slot */
     }
 }

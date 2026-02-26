@@ -160,6 +160,10 @@ body {
 .card-sigma .btn {background-color: #EB7001;border: none;}
 .card-sigma .btn:hover {background-color: #EB7001;}
 
+.card-sicapai h3 { color: #004e9c; }
+.card-sicapai .btn {background-color: #004e9c;border: none;}
+.card-sicapai .btn:hover {background-color: #004e9c;}
+
 /* --- Footer --- */
 footer {
   padding: 24px;
@@ -254,12 +258,7 @@ body {
     }
 
     /* Kartu baris kedua: Sistem Asisten (Kartu ke-4) */
-    .card-asisten {
-        grid-column: 2 / span 2; /* Mulai dari kolom 2, ambil 2 slot */
-    }
-
-    /* Kartu baris kedua: SIGMA (Kartu ke-5) */
-    .card-sigma {
-        grid-column: 4 / span 2; /* Mulai dari kolom 4, ambil 2 slot */
+    .card-asisten, .card-sigma, .card-sicapai {
+        grid-column: span 2;
     }
 }

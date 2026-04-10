@@ -11,11 +11,11 @@ body {
 }
 
 .main-container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 60px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px; /* Padding atas dikurangi dari 60px ke 40px */
 }
 
 /* --- Logo & Judul --- */
@@ -52,10 +52,10 @@ body {
 }
 
 .subtitle {
-  font-size: 1rem;
-  color: #718096;
-  margin-top: 12px;
-  margin-bottom: 50px;
+    font-size: 1rem;
+    color: #718096;
+    margin-top: 12px;
+    margin-bottom: 20px; /* Diubah dari 50px ke 20px agar lebih dekat ke highlight */
 }
 
 /* --- Card Grid --- */
@@ -298,5 +298,66 @@ body {
     /* Kartu baris kedua: Sistem Asisten (Kartu ke-4) */
     .card-asisten, .card-sigma, .card-sicapai {
         grid-column: span 2;
+    }
+}
+
+/* --- Announcement Highlight --- */
+.announcement-highlight {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    border: 1px dashed #2b6cb0;
+    padding: 8px 20px; /* Padding dikecilkan sedikit */
+    border-radius: 50px;
+    margin-top: 0; 
+    margin-bottom: 25px; /* Diubah dari 40px ke 25px agar lebih dekat ke Card Grid */
+    display: inline-flex; /* Menggunakan inline-flex agar lebar box mengikuti panjang teks */
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.badge-new {
+    background-color: #e53e3e; /* Merah untuk menarik perhatian */
+    color: white;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    animation: flash 2s infinite;
+}
+
+.announcement-text {
+    color: #4a5568;
+    font-weight: 500;
+}
+
+.highlight-link {
+    color: #2b6cb0;
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 2px solid rgba(43, 108, 176, 0.2);
+    transition: all 0.2s ease;
+}
+
+.highlight-link:hover {
+    border-bottom: 2px solid #2b6cb0;
+    color: #1a365d;
+}
+
+/* Animasi halus untuk badge NEW! */
+@keyframes flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Penyesuaian responsif agar tidak terlalu lebar di HP */
+@media (max-width: 600px) {
+    .announcement-highlight {
+        flex-direction: column;
+        text-align: center;
+        border-radius: 15px;
+        padding: 15px;
     }
 }

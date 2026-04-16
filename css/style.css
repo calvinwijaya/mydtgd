@@ -164,6 +164,18 @@ body {
 .card-sicapai .btn {background-color: #004e9c;border: none;}
 .card-sicapai .btn:hover {background-color: #004e9c;}
 
+.card-laporgeodesi h3 { color: #dd6b20; }
+.card-laporgeodesi .btn { background-color: #dd6b20; }
+.card-laporgeodesi .btn:hover { background-color: #c05621; }
+
+.card-dokumengeodesi h3 { color: #2f855a; }
+.card-dokumengeodesi .btn { background-color: #2f855a; }
+.card-dokumengeodesi .btn:hover { background-color: #276749; }
+
+.card-sirisma h3 { color: #2c7a7b; }
+.card-sirisma .btn { background-color: #2c7a7b; }
+.card-sirisma .btn:hover { background-color: #285e61; }
+
 /* --- Footer --- */
 footer {
   padding: 24px;
@@ -297,6 +309,10 @@ body {
 
     /* Kartu baris kedua: Sistem Asisten (Kartu ke-4) */
     .card-asisten, .card-sigma, .card-sicapai {
+        grid-column: span 2;
+    }
+
+    .card-laporgeodesi, .card-dokumengeodesi, .card-sirisma {
         grid-column: span 2;
     }
 }

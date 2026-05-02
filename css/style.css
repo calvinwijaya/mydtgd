@@ -164,9 +164,9 @@ body {
 .card-sicapai .btn {background-color: #004e9c;border: none;}
 .card-sicapai .btn:hover {background-color: #004e9c;}
 
-.card-laporgeodesi h3 { color: #dd6b20; }
-.card-laporgeodesi .btn { background-color: #dd6b20; }
-.card-laporgeodesi .btn:hover { background-color: #c05621; }
+.card-akurasi h3 { color: #dd6b20; }
+.card-akurasi .btn { background-color: #dd6b20; }
+.card-akurasi .btn:hover { background-color: #c05621; }
 
 .card-dokumengeodesi h3 { color: #2f855a; }
 .card-dokumengeodesi .btn { background-color: #2f855a; }
@@ -312,7 +312,7 @@ body {
         grid-column: span 2;
     }
 
-    .card-laporgeodesi, .card-dokumengeodesi, .card-sirisma {
+    .card-akurasi, .card-dokumengeodesi, .card-sirisma {
         grid-column: span 2;
     }
 }
